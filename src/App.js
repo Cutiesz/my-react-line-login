@@ -17,7 +17,7 @@ function App() {
   }
 
   const initLine = () => {
-    liff.init({ liffId: '1656611418-mq5eJBqr' }, ()=> {
+    liff.init({ liffId: "1656611418-mq5eJBqr" }, ()=> {
       if (liff.isLoggedIn) {
         runApp();
       } else {
