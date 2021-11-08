@@ -26,7 +26,7 @@ function App() {
     // }, err => console.error(err));
     liff.init({liffId: "1656612490-nKdY5Drg"})
     .then(()=>{
-      if (liff.isLoggedIn) {
+      if (liff.isLoggedIn()) {
         runApp();
       } else {
         liff.login();
