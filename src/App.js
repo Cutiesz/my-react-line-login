@@ -17,13 +17,23 @@ function App() {
   }
 
   const initLine = () => {
-    liff.init({ liffId: "1656611418-mq5eJBqr" }, ()=> {
+    // liff.init({ liffId: "1656611418-mq5eJBqr" }, ()=> {
+    //   if (liff.isLoggedIn) {
+    //     runApp();
+    //   } else {
+    //     liff.login();
+    //   }
+    // }, err => console.error(err));
+    liff.init({liffId: "1656612490-nKdY5Drg"})
+    .then(()=>{
       if (liff.isLoggedIn) {
         runApp();
       } else {
         liff.login();
       }
-    }, err => console.error(err));
+    }).catch((err)=>{
+      console.log(err.code, err.message);
+    });
   }
 
   const runApp = () => {
